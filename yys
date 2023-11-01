@@ -1,0 +1,19 @@
+When the command line prompts "No local authentication token found", it is usually because you are trying to perform a GitHub operation that requires authentication, but you did not provide valid authentication credentials. To resolve this issue, you can follow these steps:
+
+1. **Provide GitHub access token**:
+    - Log in to your GitHub account.
+    - Go to "Developer settings" in GitHub settings.
+    - Select "Personal access tokens".
+    - Create a new access token, selecting the required permissions and scopes. Make sure to select the appropriate permissions to perform the actions you need.
+    - Copy the generated access token.
+
+
+2. **Use Git command line**:
+    If you are using the Git command line tool, you can configure a global Git username and access token for authentication. This can be accomplished by following these steps:
+
+    - Open a command line terminal.
+    - Configure the global username: `git config --global user.name "YourUsername"`
+    - Configure global access token: `git config --global credential.helper store`
+    - Then execute any Git commands that require GitHub authentication and you will be prompted for your access token. Once entered, Git stores it locally for future use.
+
+With these steps, you should be able to successfully provide authentication information to resolve the "No local authentication token found" error. Make sure to protect your access token and do not share it publicly.
